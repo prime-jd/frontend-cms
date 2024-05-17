@@ -1,0 +1,119 @@
+/* style.css */
+
+/* Container styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('');
+background-size: cover;
+background-repeat: no-repeat;
+transition: filter 0.3s ease-in-out;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  
+  .content img {
+    max-width: 500px;
+    height: auto;
+  }
+  
+  .content .divider {
+    border-right: 20px solid #333;
+    height: 500px; /* Adjust as needed */
+    margin: 0 20px;
+  }
+  
+  .content h1 {
+    font-size: 55px;
+    color: brown;
+    text-shadow: 2px 2px 0 #800000, 4px 4px 0 #400000;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+  
+  .enlarge-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-decoration: none;
+  }
+  
+  .enlarge-btn:hover {
+    transform: scale(1.1); /* Enlarge the button on hover */
+  }
+
+  .container {
+    color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Full height of the viewport */
+  }
+  
+  .login-box {
+    width: 300px; /* Set width to 300px */
+    background-color: rgba(0, 0, 0, 0.5); /* Reddish transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* 30px blur effect */
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    color: white; /* Text color */
+  }
+  
+  .login-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-box label {
+    margin-bottom: 10px;
+    color: white; /* Text color */
+  }
+  
+  .login-box input, 
+  .login-box select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-box select {
+    appearance: none; /* Remove default appearance */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+  }
+  
+  .login-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-box button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }

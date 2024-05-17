@@ -1,0 +1,284 @@
+/* style.css */
+
+/* Container styles */
+
+.container {
+  color: blue;
+  font-family: cursive;
+  max-width: 400px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px; /* Equal padding on all sides */
+  border-radius: 8px;
+  background-color: rgba(173, 216, 230, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form input styles */
+.form-input {
+  width: calc(100% - 20px); /* Adjusted width to accommodate padding */
+  padding: 10px;
+  margin-bottom: 15px; /* Increased vertical gap between form elements */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Submit button styles */
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin: 0px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+/* Register.css */
+
+.container1 {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center; /* Center the content horizontally */
+  background-image: url('path/to/your/background/image.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.buttonStyle {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.buttonStyle:hover {
+  background-color: #218838;
+}
+
+.message{
+  margin: auto;
+};
+
+
+body {
+  font-family:cursive;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* DayForm.css */
+
+.form-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container h2 {
+  margin-bottom: 10px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-container select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.form-container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.form-container input[type="time"],
+.form-container input[type="text"] {
+  width: calc(100% - 10px); /* Adjust width for checkbox */
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.text{ 
+  text-align: center;
+  color:gray;
+  font-family: cursive;
+  
+}
+.navStyle li a {
+  margin :30px;
+  text-decoration: none;
+  color : white;
+}
+
+/* Header Styles */
+header {
+  border-radius: 20px;
+  background-color: rgba(255, 165, 0, 0.5); /* Dark gray background */
+  color: brown; /* White text color */
+  padding: 20px; /* Add some padding around the content */
+  margin: auto;
+}
+
+/* Navigation Styles */
+nav ul {
+  justify-content: center;
+  text-align: center;
+  list-style-type: none; /* Remove bullet points from the list */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+  justify-content: center;
+  display: inline; /* Display list items horizontally */
+  margin-right: 30px; /* Add some space between list items */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color:brown;
+   /* White text color for links */
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color:red /* Underline links on hover */
+}
+footer {
+  
+  border-radius: 20px;
+  background-color: rgba(255, 165, 0, 0.5); /* Dark gray background */
+  color: brown; /* White text color */
+  padding: 20px; /* Add some padding around the content */
+}
+footer p{
+  text-align: center;
+}
+
+/*item dayform*/
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px; /* Adjust width as needed */
+}
+
+.heading {
+  font-weight: bold;
+}
+
+.brown {
+  color: brown;
+}
+
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.input-field {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+

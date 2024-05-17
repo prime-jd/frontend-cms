@@ -1,0 +1,50 @@
+/* Timetable.css */
+
+/* Style the table */
+table {
+    margin-bottom :30px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Style the table header */
+  th {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /* Style the table body */
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /* Style the time slot cells */
+  td:first-child {
+    background-color: orange;
+    color: white;
+  }
+  
+  /* Darken the cell partition lines */
+  td:not(:first-child) {
+    border-left-color: #888; /* Darken the left border */
+  }
+  
+  /* Style the checkbox */
+  .checkbox {
+    margin-right: 5px;
+  }
+/* Timetable.css */
+
+/* Style the table header */
+th {
+    background-color: brown; /* Brown background color */
+    color: white; /* White text color */
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+    
