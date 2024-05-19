@@ -117,6 +117,7 @@ function DayForm() {                                         // to protect it fr
           const isInRange = compareTimes(startTime, currentTime, rangeInMinutes);
           return isInRange;
         });
+        
       
         console.log(filteredItems);
         if (filteredItems.length > 0) {
