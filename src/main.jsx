@@ -17,18 +17,18 @@ const router = createBrowserRouter(
   
   [
     {
-      path: '/vite-react-router/',
+      path: '/frontend/',
       element: <Layout />,
       children: [
-        { path: '/vite-react-router/', element: <Home /> },
-        { path: '/vite-react-router/signup', element: <Register /> },
-        { path: '/vite-react-router/dayform', element: <DayForm /> },
-        { path: '/vite-react-router/tableform', element: <TableForm /> },
-        { path: '/vite-react-router/teacher-tt', element: <OTPGenerator /> },
+        { path: '/frontend/', element: <Home /> },
+        { path: '/frontend/signup', element: <Register /> },
+        { path: '/frontend/dayform', element: <DayForm /> },
+        { path: '/frontend/tableform', element: <TableForm /> },
+        { path: '/frontend/teacher-tt', element: <OTPGenerator /> },
       ],
     },
-    { path: '/vite-react-router/otpform', element: <OTPForm /> },
-    { path: '/vite-react-router/login', element: <Login /> },
+    { path: '/frontend/otpform', element: <OTPForm /> },
+    { path: '/frontend/login', element: <Login /> },
   ]
 )
 
