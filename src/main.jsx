@@ -15,21 +15,19 @@ import OTPForm from './components/OTPForm.jsx'
 
 const router = createBrowserRouter(
   
-  [
-    {
-      path: '/frontend/',
-      element: <Layout />,
-      children: [
-        { path: '/frontend/', element: <Home /> },
-        { path: '/frontend/signup', element: <Register /> },
-        { path: '/frontend/dayform', element: <DayForm /> },
-        { path: '/frontend/tableform', element: <TableForm /> },
-        { path: '/frontend/teacher-tt', element: <OTPGenerator /> },
-      ],
-    },
-    { path: '/frontend/otpform', element: <OTPForm /> },
-    { path: '/frontend/login', element: <Login /> },
-  ]
+  createRoutesFromElements(
+    <Route>
+    <Route path='/' element={<Layout />}>
+       <Route path='' element={<Home  />} />
+       <Route path='signup' element={<Register />} />
+       <Route path='dayform' element={<DayForm />} />
+       <Route path='tableform' element={<TableForm />} />
+       <Route path='teacher-tt' element={<OTPGenerator/>} />
+    </Route>
+    <Route path='/otpform' element={<OTPForm/>} />
+    <Route path='/login' element={<Login />}/>
+    </Route>
+  )
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
