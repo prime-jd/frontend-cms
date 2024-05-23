@@ -21,7 +21,7 @@ const router = createBrowserRouter(
        <Route path='' element={<Home  />} />
        <Route path='/frontend/signup' element={<Register />} />
        <Route path='/frontend/dayform' element={<DayForm />} />
-       <Route path='tableform' element={<TableForm />} />
+       <Route path='/frontend/tableform' element={<TableForm />} />
        <Route path='teacher-tt' element={<OTPGenerator/>} />
     </Route>
     <Route path='/frontend/otpform' element={<OTPForm/>} />
