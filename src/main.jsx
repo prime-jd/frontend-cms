@@ -17,7 +17,7 @@ const router = createBrowserRouter(
   
   createRoutesFromElements(
     <Route>
-    <Route path='/frontend/' element={<Layout />}>
+    <Route path='/' element={<Layout />}>
        <Route path='' element={<Home  />} />
        <Route path='signup' element={<Register />} />
        <Route path='dayform' element={<DayForm />} />
