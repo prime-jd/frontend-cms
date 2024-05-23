@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 //import './App.css'
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
+import { Route, RouterProvider, HashRouter, createRoutesFromElements } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Login from './components/Login.jsx'
 import DayForm from './components/DayForm.jsx'
@@ -13,7 +13,7 @@ import OTPGenerator from './components/OTPgenerator.jsx'
 import OTPForm from './components/OTPForm.jsx'
 
 
-const router = createBrowserRouter(
+const router = HashRouter(
   
   createRoutesFromElements(
     <Route>
