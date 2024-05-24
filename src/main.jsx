@@ -24,8 +24,8 @@ const router = createBrowserRouter(
        <Route path='tableform' element={<TableForm />} />
        <Route path='teacher-tt' element={<OTPGenerator/>} />
     </Route>
-    <Route path='/otpform' element={<OTPForm/>} />
-    <Route path='/login' element={<Login />}/>
+    <Route path='/frontend/otpform' element={<OTPForm/>} />
+    <Route path='/frontend/login' element={<Login />}/>
     </Route>
   )
 )
