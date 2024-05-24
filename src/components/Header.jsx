@@ -33,7 +33,7 @@ function Header() {
         <nav>
           <ul >
             <li><a href="/">Home</a></li>
-            {isLoggedin && <li><a href="/login">logout</a></li>}
+            {isLoggedin && <li><a href="/frontend/login">logout</a></li>}
             {isStudent &&<li><a href="/dayform">DayForm</a></li>}
             {isLoggedin && <li><a href="/contact">Contact</a></li>}
             {isFaculty && <li><a href="/teacher-tt">TimeTable</a></li>}
