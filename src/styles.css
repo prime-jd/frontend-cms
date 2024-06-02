@@ -77,7 +77,7 @@ transition: filter 0.3s ease-in-out;
   
   .login-box h2 {
     margin-bottom: 20px;
-    color: white; /* Text color */
+    color: white;
   }
   
   .login-box form {
