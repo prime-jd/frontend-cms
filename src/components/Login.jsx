@@ -40,7 +40,7 @@ function Login({Children}) {
     e.preventDefault();
 
     try {
-      const response = await fetch('api/v1/user/login', {
+      const response = await fetch('/api/v1/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

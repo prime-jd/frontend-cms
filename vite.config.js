@@ -12,7 +12,8 @@ export default defineConfig({
   server : {
     
       proxy :{
-        "/api" :"https://cms-dnge.vercel.app"
+        // "/api" :"https://cms-dnge.vercel.app"
+        "/api" :"http://localhost:8000"
       }
     
   }
