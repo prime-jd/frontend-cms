@@ -4,9 +4,10 @@ import { data } from 'autoprefixer';
 import TableForm from './TableForm';
 import { useNavigate } from 'react-router-dom';
 import FetchTT from './FetchTT';
+import { useSelector } from 'react-redux';
 
 function DayForm() {                                         // to protect it from teacher
-    // State variable to store selected day
+    const {user} = useSelector((state)=>state.variables);
     const [selectedDay, setSelectedDay] = useState('');
     const [username, setUsername] = useState('');
     const [items, setItems]= useState([]);
@@ -182,7 +183,7 @@ function DayForm() {                                         // to protect it fr
             <form onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="username">username</label>
-                  <input type='text' value={username} onChange={(e)=>setUsername(e.target.value)} />
+                  <input type='text' value={user} readOnly />
                 </div>
                 <div>
                     <label htmlFor="day">Select a day:</label>
