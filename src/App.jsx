@@ -1,25 +1,41 @@
 
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import axios from 'axios'
 import './App.css'
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 
-import Register from './components/Register'
-import TableForm from './components/TableForm'
-import DayForm from './components/DayForm'
+import Layout from './Layout.jsx'
+import Login from './components/Login.jsx'
+import DayForm from './components/DayForm.jsx'
+import Register from './components/Register.jsx'
+import Home from './components/Home.jsx'
+import TableForm from './components/TableForm.jsx'
+import OTPGenerator from './components/OTPgenerator.jsx'
+import OTPForm from './components/OTPForm.jsx'
 
 function App() {
   
-
+  const router = createBrowserRouter(
+  
+    createRoutesFromElements(
+      <Route>
+      <Route path='/' element={<Layout />}>
+         <Route path='' element={<Home  />} />
+         <Route path='signup' element={<Register />} />
+         <Route path='dayform' element={<DayForm />} />
+         <Route path='tableform' element={<TableForm />} />
+         <Route path='teacher-tt' element={<OTPGenerator/>} />
+      </Route>
+      <Route path='/otpform' element={<OTPForm/>} />
+      <Route path='/login' element={<Login />}/>
+      </Route>
+    )
+  )
   
   
 
   return (
     <>
    
-    <div>This is intro page</div>
-    <a href='/signup'>Signup</a>
+   <RouterProvider router={router} />
     
     </>
   )
