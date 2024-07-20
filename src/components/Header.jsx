@@ -1,32 +1,22 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import "../App.css"
-import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Header() {
-  const [isLoggedin, setIsLoggedin] = useState(false)
+  const { user}= useSelector((state)=>state.variables);
   const [isFaculty, setFaculty] = useState(false)
   const [isStudent, setStudent] = useState(false)
-
-  function getCookieDetails() {
-    const cookies = Cookies.get("userLogged");
-    if(cookies==="teacher"){
-      setFaculty(true)
-    }
-    if(cookies==="student"){
-      setStudent(true)
-    } 
-    if(cookies != "")
-      setIsLoggedin(true)
-  }
-
+  
   useEffect(()=>{
-    getCookieDetails()
-    // console.log(getCookieDetails())
-    // console.log(isLoggedin)
-    // console.log(document.cookie)
-  },[getCookieDetails])
+    if(user){
+      if(user!='' && user.substr(0,2)==='T_')
+        setFaculty(true);
+      if(user!='' && user.substr(0,2)!=='T_')
+        setStudent(true);
+    }
+  },[])
 
     return (
       <header>
@@ -34,9 +24,9 @@ function Header() {
         <nav>
           <ul >
             <li><Link to="/">Home</Link></li>
-            {isLoggedin && <li><Link to='/login'>logout</Link></li>}
+            <li><Link to='/login'>{user ? 'logout' : 'login/signup'}</Link></li>
             {isStudent &&<li><Link to="/dayform">DayForm</Link></li>}
-            {isLoggedin && <li><Link to="/contact">Contact</Link></li>}
+            {user && <li><Link to="/contact">Contact</Link></li>}
             {isFaculty && <li><Link to="/teacher-tt">TimeTable</Link></li>}
           </ul>
         </nav>
