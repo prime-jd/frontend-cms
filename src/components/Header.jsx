@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import "../App.css"
 import Cookies from 'js-cookie';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isLoggedin, setIsLoggedin] = useState(false)
@@ -32,11 +33,11 @@ function Header() {
         <h1>Class Monitoring System</h1>
         <nav>
           <ul >
-            <li><a href="/">Home</a></li>
-            {isLoggedin && <li><a href="/login">logout</a></li>}
-            {isStudent &&<li><a href="/dayform">DayForm</a></li>}
-            {isLoggedin && <li><a href="/contact">Contact</a></li>}
-            {isFaculty && <li><a href="/teacher-tt">TimeTable</a></li>}
+            <li><Link to="/">Home</Link></li>
+            {isLoggedin && <li><Link to='/login'>logout</Link></li>}
+            {isStudent &&<li><Link to="/dayform">DayForm</Link></li>}
+            {isLoggedin && <li><Link to="/contact">Contact</Link></li>}
+            {isFaculty && <li><Link to="/teacher-tt">TimeTable</Link></li>}
           </ul>
         </nav>
       </header>
