@@ -9,7 +9,6 @@ import { useSelector } from 'react-redux';
 function DayForm() {                                         // to protect it from teacher
     const {user} = useSelector((state)=>state.variables);
     const [selectedDay, setSelectedDay] = useState('');
-    const [username, setUsername] = useState('');
     const [items, setItems]= useState([]);
     const [daySubmit, setDaySubmit] = useState(false)
     const [currentTime, setCurrentTime] = useState(getCurrentTime());
@@ -30,7 +29,7 @@ function DayForm() {                                         // to protect it fr
     
         // Prepare form data
         const formData = {
-            username: username,
+            username: user,
             day: selectedDay
         };
     
@@ -53,17 +52,12 @@ function DayForm() {                                         // to protect it fr
                  }
              })
              .then(data => {
-                 // console.log(data);
-                 setItems(data.data); // Update state with data from response
+                 setItems(data.data); 
                  setDaySubmit(true);
                  console.log(items);
-                
-                 //compareItemTime(); 
              })
-             .catch(error => navigate('/login'));
+             .catch(error=>console.log(error));
              
-             // compareItemTime(); 
-            //  console.log("function called")
     };
     
     const handletimeSubmit = (event) => {
