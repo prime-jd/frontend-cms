@@ -157,6 +157,7 @@ function DayForm() {                                         // to protect it fr
     //render for update time
     useEffect(() => {
         setDate(getCurrentDate());
+        console.log(date)
         const intervalId = setInterval(() => {
           setCurrentTime(getCurrentTime());
         }, 60000); 

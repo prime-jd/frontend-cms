@@ -7,12 +7,17 @@ function OTPForm() {
   const [otp, setOTP] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
+  const [timerStarted, setTimerStarted] = useState(false);
 
-  // Function to handle form submission
+  const handleNavigation = () => {
+    setTimerStarted(true);
+    setTimeout(() => {
+      navigate('/dayform');
+    }, 3000); // 3 seconds
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Send OTP and roll number to backend
     try {
       const response = await fetch('/api/v1/user/authotp', {
         method: 'POST',
@@ -24,6 +29,8 @@ function OTPForm() {
       const data = await response.json();
       console.log(data); // Handle the response as needed
       // navigate('/dayform');
+      setMessage(data.message);
+      handleNavigation();
     } catch (error) {
       console.log('Error sending OTP:', error);
       setMessage(error);
