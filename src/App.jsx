@@ -10,6 +10,7 @@ import Home from './components/Home.jsx'
 import TableForm from './components/TableForm.jsx'
 import OTPGenerator from './components/OTPgenerator.jsx'
 import OTPForm from './components/OTPForm.jsx'
+import DateForm from './components/DateForm.jsx'
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
          <Route path='dayform' element={<DayForm />} />
          <Route path='tableform' element={<TableForm />} />
          <Route path='teacher-tt' element={<OTPGenerator/>} />
+         <Route path='recorddisplay' element={<DateForm />} />
       </Route>
       <Route path='/otpform' element={<OTPForm/>} />
       <Route path='/login' element={<Login />}/>

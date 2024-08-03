@@ -3,18 +3,17 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()], 
-  build: {
-    outDir: 'dist', 
+  server: {
+    host: true,
+    strictPort: true,
+    port: 3000,
+    proxy: {
+      '/api': {
+        target: 'http://server_image:8000', // or your API server URL
+        changeOrigin: true,
+        secure: false, // This disables SSL verification
+      },
+    },
   },
-  publicDir: 'public',
- // base : "/frontend/",
-  server : {
-    
-      proxy :{
-        // "/api" :"https://cms-dnge.vercel.app"
-        "/api" :"http://localhost:8000"
-      }
-    
-  }
+  plugins: [react()],
 })
