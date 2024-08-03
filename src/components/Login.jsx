@@ -4,6 +4,7 @@ import "../styles.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { setuser } from '../features/variables/variablesSlice.js';
 import { Link } from 'react-router-dom';
+import { clearPersistedState } from '../store.js';
 
 function Login() {
   const [password, setPassword] = useState('');
@@ -48,6 +49,7 @@ function Login() {
       .then((res) => {
         if (res.ok) {
           dispatch(setuser(''));
+          clearPersistedState();
         } else {
           console.error('Failed to logout');
         }
