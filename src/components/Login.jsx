@@ -18,7 +18,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch('/api/v1/user/login', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/user/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ function Login() {
   });
 
   const handleLogout = () => {
-    fetch('/api/v1/user/logout', {
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/user/logout`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

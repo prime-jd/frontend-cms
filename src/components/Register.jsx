@@ -51,7 +51,7 @@ const Register = () => {
     formData.append('fullname', fullname);
 
     
-    fetch('/api/v1/user/register',
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/user/register`,
        {method : 'POST',
        body : formData}
   )
