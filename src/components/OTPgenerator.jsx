@@ -48,7 +48,7 @@ function OTPGenerator() {
       time : currentTime,className
     };
 
-    fetch('/api/v1/user/schedule-out', {
+    fetch('https://cms-eight-navy.vercel.app/api/v1/user/schedule-out', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

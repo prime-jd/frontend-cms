@@ -19,7 +19,7 @@ function OTPForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/v1/user/authotp', {
+      const response = await fetch('https://cms-eight-navy.vercel.app/api/v1/user/authotp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

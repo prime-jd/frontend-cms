@@ -6,7 +6,7 @@ function FetchTT() {
 
   useEffect(() => {
     // Fetch data from the API
-    fetch('/api/v1/user/week-schedule')
+    fetch('https://cms-eight-navy.vercel.app/api/v1/user/week-schedule')
       .then(response => response.json())
       .then(data => {
         console.log(data.message)
