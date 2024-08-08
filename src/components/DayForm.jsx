@@ -34,7 +34,7 @@ function DayForm() {                                         // to protect it fr
         };
     
         // Send form data to backend using POST request
-        fetch('https://cms-eight-navy.vercel.app/api/v1/user/schedule', {
+        fetch('/api/v1/user/schedule', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ function DayForm() {                                         // to protect it fr
             className
         };
         // Send form data to backend using POST request
-        fetch('https://cms-eight-navy.vercel.app/api/v1/user/schedule-in', {
+        fetch('/api/v1/user/schedule-in', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

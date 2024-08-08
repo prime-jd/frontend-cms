@@ -51,7 +51,7 @@ const Register = () => {
     formData.append('fullname', fullname);
 
     
-    fetch('https://cms-eight-navy.vercel.app/api/v1/user/register',
+    fetch('/api/v1/user/register',
        {method : 'POST',
        body : formData}
   )
