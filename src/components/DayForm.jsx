@@ -7,7 +7,7 @@ import FetchTT from './FetchTT';
 import { useSelector } from 'react-redux';
 
 function DayForm() {                                         // to protect it from teacher
-    const {user} = useSelector((state)=>state.variables);
+    const user = localStorage.getItem('user');
     const [selectedDay, setSelectedDay] = useState('');
     const [items, setItems]= useState([]);
     const [daySubmit, setDaySubmit] = useState(false)
