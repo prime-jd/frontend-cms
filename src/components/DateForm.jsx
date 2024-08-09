@@ -20,7 +20,7 @@ const DateForm = () => {
         const formattedDate = formatDate(date);
 
         try {
-            const response = await fetch('/api/v1/user/recorddisplay', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/user/recorddisplay`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
