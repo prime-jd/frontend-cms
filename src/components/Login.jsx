@@ -16,7 +16,6 @@ function Login() {
   
   const handleSubmit = (async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/user/login`, {
         method: 'POST',
@@ -40,6 +39,7 @@ function Login() {
   });
 
   const handleLogout = () => {
+    e.preventDefault()
     fetch(`${import.meta.env.VITE_API_URL}/api/v1/user/logout`, {
       method: 'POST',
       headers: {
