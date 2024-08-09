@@ -2,16 +2,16 @@ import React, { useState, useCallback, useEffect, Children } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../styles.css"
 import { useDispatch, useSelector } from 'react-redux';
-import { setuser } from '../features/variables/variablesSlice.js';
+import { loadAccessToken, setuser } from '../features/variables/variablesSlice.js';
 import { Link } from 'react-router-dom';
-import { clearPersistedState } from '../store.js';
+
 
 function Login() {
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
   const [error, setError] = useState();
   const navigate = useNavigate();
-  const {user} = useSelector((store)=>store.variables)
+  const user = localStorage.getItem('user');
   const dispatch = useDispatch();
   
   const handleSubmit = (async (e) => {
@@ -29,7 +29,9 @@ function Login() {
         throw new Error('Login failed');
       }
       const data = await response.json();
-      dispatch(setuser(data.message.user.username)); // assuming the response has a field 'username'
+      localStorage.setItem('user', data.message.user.username);
+      dispatch(loadAccessToken());
+      // dispatch(setuser(data.message.user.username)); // assuming the response has a field 'username'
       navigate("/")
       
     } catch (error) {
@@ -48,8 +50,8 @@ function Login() {
     })
       .then((res) => {
         if (res.ok) {
-          dispatch(setuser(''));
-          clearPersistedState();
+          localStorage.setItem('user', '');
+          navigate('/login')
         } else {
           console.error('Failed to logout');
         }
