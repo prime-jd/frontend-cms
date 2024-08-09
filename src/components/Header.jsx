@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 function Header() {
-  const { user}= useSelector((state)=>state.variables);
+  const user = localStorage.getItem('user') ||'';
   const [isFaculty, setFaculty] = useState(false)
   const [isStudent, setStudent] = useState(false)
   
